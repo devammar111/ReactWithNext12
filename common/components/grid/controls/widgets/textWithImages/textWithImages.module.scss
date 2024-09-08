@@ -1,0 +1,267 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetTextWithImages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .twoImageContainer {
+        margin: 0 auto;
+    }
+
+    .spacer, .twoImageContainer {
+        max-width: 781px;
+    }
+
+    &.containerWithBackground {
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+
+        .contentSec {
+            padding: 30px 17px 0 0;
+        }
+
+        .removeTopPadding {
+            padding-top: 0;
+        }
+    }
+
+    &.extraPaddingWithBackground {
+        padding-top: 8.625rem;
+    }
+
+    &.layoutRightAligned {
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+
+        .contentSec {
+            padding: 80px 0px 0 43px;
+        }
+
+        .removeTopPadding {
+            padding-top: 0;
+        }
+
+        .image {
+
+            &:nth-child(2) {
+                margin-right: 38.8%;
+                margin-left: auto;
+            }
+        }
+
+        .seconImageLeftPadding {
+
+            &:nth-child(2) {
+                left: 11%;
+            }
+        }
+
+        .imageContainer {
+            padding-left: 0;
+        }
+    }
+
+    .baseImageContainer {
+        position: absolute;
+        z-index: -1;
+        > span {
+            width: 100% !important;
+        }
+    }
+
+    .leftAligned {
+        left: -400px;
+        bottom: 0;
+    }
+
+    .rightAligned {
+        left: 400px;
+        bottom: 0;
+    }
+
+    .image {
+        line-height: 0;
+
+        &:nth-child(2) {
+            width: 45.327%;
+            z-index: 1;
+            margin-top: -27.9%;
+            margin-left: 38.8%;
+            position: relative;
+        }
+    }
+
+    .imageContainer {
+        padding-left: 1rem;
+        position: relative;
+    }
+
+    .autoMinHeight {
+        min-height: auto;
+    }
+
+    .contentSec {
+        padding: 60px 38px 0 0;
+    }
+
+    .leftPanel {
+        padding-right: $mediumGutters;
+    }
+
+    .rightPanel {
+        padding-left: $largeGutters;
+        min-height: fit-content !important;
+    }
+
+    .flexContainer {
+        margin-bottom: -1.25rem;
+    }
+
+    &.extraPadding {
+        padding-top: 211px;
+        padding-bottom: 193px;
+    }
+
+    .horizontalLineContainer {
+        max-width: 100%;
+        width: 100%;
+
+        .horizontalLine {
+            position: absolute;
+            left: 0rem;
+            padding-right: 29rem;
+            width: 100%;
+            border: 1px solid $blueLight;
+            opacity: 0.4;
+            margin-top: 5rem;
+        }
+    }
+
+    .removeTopPadding {
+        padding-top: 0;
+    }
+
+    .dropdown {
+        min-height: 50px;
+        max-width: 316px;
+        border-radius: 8px;
+        background-color: $greyLighter;
+        border: none;
+        margin-top: 3rem;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='10' height='5' viewBox='0 0 10 5'><polygon points='0 0 5 5 10 0' style='fill: %23000'></polygon></svg>");
+        background-position: right 1.5rem center;
+        background-repeat: no-repeat;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        padding-left: 1rem;
+        font-family: $proximaNovaFont;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 26px;
+    }
+
+    @include breakpoint(medium) {
+        .flexContainer {
+            margin-bottom: -2.5rem;
+        }
+    }
+
+    @include breakpoint(large) {
+        .flexContainer {
+            margin-bottom: -5rem;
+        }
+    }
+
+    @include breakpoint(xlarge only) {
+
+        .contentSec {
+            padding: 40px 29px 0 0px;
+        }
+
+        .autoMinHeight {
+            min-height: auto;
+        }
+    }
+
+    @include breakpoint(large only) {
+
+        .contentSec {
+            padding: 40px 29px 0 0px;
+        }
+
+        .autoMinHeight {
+            min-height: auto;
+        }
+
+        &.extraPadding {
+            padding-top: 111px;
+            padding-bottom: 93px;
+        }
+    }
+
+    @include breakpoint(medium down) {
+
+        &.extraPadding {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .leftPanel {
+            padding-right: 0;
+        }
+
+        .rightPanel {
+            padding-left: 0;
+        }
+
+        .flexContainer {
+            flex-direction: column !important;
+        }
+
+        .contentSec {
+            padding-left: 0px !important;
+            padding: 40px 10px 0 0;
+        }
+
+        .imageContainer {
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .autoMinHeight {
+            min-height: auto;
+        }
+
+        .leftAligned {
+            left: -280px;
+            //margin-top: -380px;
+        }
+
+        .rightAligned {
+            left: 280px;
+            //margin-top: -380px;
+        }
+
+        &.containerWithBackground {
+            .contentSec {
+                padding: 0;
+            }
+        }
+
+        &.extraPaddingWithBackground {
+            padding-top: 1.625rem;
+        }
+    }
+
+    @include breakpoint(small only) {
+
+        .autoMinHeight {
+            min-height: auto;
+        }
+    }
+}

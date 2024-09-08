@@ -1,0 +1,140 @@
+@import '../../../styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.footer {
+    padding: 3rem 0;
+    font-size: .875rem;
+    position: relative;
+
+    .contactMethods {
+        margin-bottom: 3.5rem;
+        display: flex;
+            
+        @include breakpoint(large up) {
+            justify-content: space-between;            
+        }
+
+        @include breakpoint(large down) {
+            flex-direction: column;
+            margin-bottom: 2.5rem;
+        }
+
+        .contactMethodsCell {
+            flex: 0 0 auto;
+            
+            .logo,
+            .newsletterContainer {
+                height: 72px;
+                margin-bottom: 3.5rem;
+            }
+    
+            .logo {
+                width: 235px;
+                display: block;
+                position: relative;
+            }
+
+            .contactCol {
+                .contactInfoCell {
+                    h6,
+                    p {
+                       margin-bottom: 0;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    h6 {
+                        text-transform: uppercase;
+                    }
+                }
+                .contactInfoCellRange {
+                    &:not(:last-child) {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+
+                .contactInfoCellRte {
+                    p {
+                        &:not(:last-child) {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+            }
+    
+            .newsletterContainer {
+                display: flex;
+                align-items: flex-end;
+                @include breakpoint(large down) {
+                    margin-bottom: 2.5rem;
+                }
+                @include breakpoint(small only) {
+                    width: 100%;
+                }
+
+                .newsletterBlock {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .newsletterPrompt {
+                        margin-right: 1rem;
+                        height: 32px;
+
+                        a {
+                            height: 100%;
+                            display: flex;
+                            align-items: flex-end;
+                            
+                            i {
+                                line-height: 32px;
+                                vertical-align: middle;
+                                margin-right: 1rem;
+
+                                &::before {
+                                    font-size: 1.25rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .newsletteInlineList {
+                        display: flex;
+                    }
+                }
+            }
+
+            .contactLinks {
+                display: inline-flex;
+
+                @include breakpoint(small only) {
+                    width: 100%;
+                    justify-content: space-between;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .topLink {
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .copyright {
+        font-size: .625rem;
+        letter-spacing: 1.25px;
+        >span {
+            margin-right: 1rem;
+        }
+    }
+    
+    .bottomLinks {
+        padding-left: .5rem;
+        text-transform: uppercase;
+    }
+}

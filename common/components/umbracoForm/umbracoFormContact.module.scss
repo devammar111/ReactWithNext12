@@ -1,0 +1,195 @@
+@import '@styles/variables.scss';
+
+.umbracoFormContact {
+    text-align: center;
+    max-width: 480px;
+    margin: 0px auto 0;
+    padding: 0;
+
+    fieldset {
+        border: none;
+    }
+
+    input[value=''] ~ fieldset {
+        &:before, &:after {
+            opacity: 1;
+        }
+    }
+
+
+    label {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 1rem;
+        font-family: $proximaNovaFont;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 26px;
+        margin-bottom: 5px;
+        display: flex;
+    }
+
+    input::placeholder {
+        color: #000000 !important;
+        opacity: 1 !important;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 9px 19px;
+        box-sizing: border-box;
+        background-color: #fff !important;
+        color: #000000;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 26px;
+        border: 1px solid $greyLight;
+        border-radius: 8px;
+        max-width: 480px;
+        width: 480px;
+    }
+
+    .select {
+        padding: 9px 30px 9px 22px;
+    }
+
+    input, select {
+        height: 52px;
+    }
+
+    select {
+        background-color: white;
+        display: inline-block;
+        margin: 0;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='10' height='5' viewBox='0 0 10 5'><polygon points='0 0 5 5 10 0' style='fill: %23B2334E'></polygon></svg>");
+        background-position: right 1.5rem center;
+        background-repeat: no-repeat;
+    }
+
+    select {
+        > option {
+            padding: 9px 19px;
+            height: 52px;
+            width: 413px;
+            box-sizing: border-box;
+            background-color: #fff !important;
+            border: none !important;
+            border-radius: 7px;
+            color: #000000;
+            font-size: 18px;
+            letter-spacing: 0;
+            line-height: 26px;
+        }
+    }
+
+    .field {
+        // margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &.textAreaField {
+            > div > div {
+                padding: 0;
+            }
+        }
+    }
+
+    .dropdown {
+        > div {
+            overflow: hidden;
+            position: relative;
+
+            &::after {
+                width: 0;
+                height: 0;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 6px solid $red;
+                position: absolute;
+                top: 45%;
+                right: 24px;
+                content: "";
+                z-index: 98;
+            }
+        }
+    }
+
+    .buttonWrapper {
+        text-align: left;
+
+        > button {
+            border-radius: 0 !important;
+        }
+    }
+
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    p {
+        margin: 5px 0 0;
+        line-height: 17px;
+    }
+
+    &:not(.backofficeUmbracoForm) {
+        @media (max-width: 575px) {
+            input,
+            select,
+            textarea {
+                width: 100%;
+            }
+        }
+    }
+
+    &.backofficeUmbracoForm {
+        @media (max-width: 670px) {
+            input,
+            select,
+            textarea {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .formClassName {
+        max-width: 490px;
+        margin: 22px auto 0;
+        padding: 0 17px;
+
+        .page {
+            margin-bottom: 20px !important;
+        }
+
+        .button {
+            height: 50px;
+            margin: 30px 0 0;
+        }
+
+        input {
+            padding: 9px 18px;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        .optionalField {
+            fieldset {
+                padding: 9px 18px;
+
+                &:before, &:after {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

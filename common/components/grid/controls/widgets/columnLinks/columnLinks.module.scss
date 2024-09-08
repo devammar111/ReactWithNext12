@@ -1,0 +1,197 @@
+@import '../../../../../../styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetColumnLinks {
+    position: relative;
+    overflow: hidden;
+    
+    h3, h2, h5, h6 {
+        color: $white;
+    }
+
+    .newContainerContent {
+        width: 100%;
+        color: $white;
+        position: relative;
+
+        .imageWrapper {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(100%, -50%);
+            width: calc((100vw - #{$grid-container}) / 2);
+
+            .newRightIcon {
+                margin-left: auto;
+            }
+        }
+    
+        .newContent {
+            display: flex;
+            width: 100%;
+            padding: 91px 0 76.03px;
+    
+            .leftContainer {
+                flex: 1 1 auto;
+                max-width: 781px;
+                width: 56%;
+                min-width: 56%;
+
+                .titleContainer {
+                    padding-left: 15%;
+                    margin-bottom: 70px;
+
+                    h2 {
+                        font-size: 48px;
+                    }
+
+                    h3 {
+                        font-size: 70px;
+                    }
+                }
+
+                .imageContainer {
+                    width: 100%;
+                    position: relative;
+                    margin-bottom: 30%;
+
+                    .portrait {
+                        width: 45.32%;
+                        position: absolute;
+                        top: 100%;
+                        left: 39.1%;
+                        transform: translateY(-50%) !important;
+                    }
+                }
+            }
+    
+            .rightContainer {
+                margin-left: 80px;
+                padding-top: 78px;
+
+                .cell {
+                    margin-bottom: 2rem;
+                    
+                    &:nth-child(odd) {
+                        padding-right: 30px;
+                    }
+
+                    &:nth-child(even) {
+                        padding-left: 30px;
+                    }
+
+                    h5,
+                    h6 {
+                        font-size: 18px;
+                    }
+
+                    h5 {
+                        letter-spacing: 1.5px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            @include breakpoint(large down) {
+                flex-direction: column;
+
+                .leftContainer {
+                    width: 100%;
+                    min-width: 100%;
+
+                    .titleContainer {
+                        padding-left: 0;
+                    }
+                }
+
+                .rightContainer {
+                    margin-left: 0;
+                }
+            }
+
+            @include breakpoint(medium only) {
+                .imageContainer {
+                    margin-bottom: 25%;
+                }
+            }
+
+            @include breakpoint(small only) {
+                .imageContainer {
+                    margin-bottom: 20%;
+                }
+
+                .rightContainer {
+                    padding-top: 40px;
+                }
+            }
+        }
+
+        &.TileLinks {
+            position: unset;
+            color: $black;
+
+            .imageWrapper {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                top: unset;
+                width: unset;
+                transform: unset;
+            }
+        
+            .newContent {
+                padding: 154px 0 218px 0;
+
+                .leftContainer {
+                    .titleContainer {
+                        margin-bottom: 43px;
+
+                        h2 {
+                            color: $black;
+                            line-height: 58px;
+                        }
+    
+                        h3 {
+                            color: #000000;
+                        }
+                    }
+                }
+        
+                .rightContainer {
+                    padding-top: 31px;
+                    margin-left: 88px;
+
+                    .rte {
+                        padding: 0 90px 55px 0;
+                        
+                        > p {
+                            line-height: 28px;
+                        }
+                    }
+
+                    .cell {
+                        margin-bottom: 30px;
+
+                        &:nth-child(odd) {
+                            padding-right: 15px;
+                        }
+
+                        &:nth-child(even) {
+                            padding-left: 15px;
+                        }
+                    }
+                }
+
+                @include breakpoint(large down) {
+                    .rightContainer {
+                        margin-left: 0;
+
+                        .rte {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

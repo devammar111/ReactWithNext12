@@ -1,0 +1,42 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetIntro {
+    display: flex;
+    justify-content: space-between;
+
+    .content {
+        margin: 0;
+        flex: 1 1 auto;
+    }
+
+    .socialContainer {
+        flex: 0 0 auto;
+    }
+
+    .videoContainer {
+        max-width: 1020px;
+    }
+
+    .text {
+        max-width: 957px;
+        
+          ul li::marker {
+            content: "\2022";
+            color: $red;
+            margin-left: -1em;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+          }
+          li span {
+            position: relative;
+            left: 1rem;
+          }
+          
+    }
+
+    @media screen and (min-width:#{$global-width}) {
+        padding-left: calc(50vw - #{$global-width * .5 + .5625rem});
+    }
+}

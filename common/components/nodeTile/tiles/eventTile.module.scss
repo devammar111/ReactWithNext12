@@ -1,0 +1,12 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.eventTile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .readMore {
+        font-weight: 700;
+    }
+}

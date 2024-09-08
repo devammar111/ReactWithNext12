@@ -1,0 +1,69 @@
+@import './variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+@import 'nprogress/nprogress.css';
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-visibility-classes;
+@include foundation-xy-grid-classes;
+@import './util.scss';
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    color: $textColor;
+    font-family: $defaultFont;
+    margin: 0;
+    overflow: hidden auto !important;
+    padding-right: 0 !important;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.animationWrapper {
+    transform-origin: center 50vh;
+}
+
+.swiper-button-disabled {
+    opacity: 0.3;
+}
+
+.hidden-chervon.swiper-button-disabled {
+    display: none !important;
+}
+
+.rte {
+    *:last-child:not([class^="medium-margin"]):not([class^="small-margin"]) {
+        margin-bottom: 0;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+[id] {
+    scroll-margin-top: $mobileHeaderHeight;
+}
+
+@include breakpoint(large) {
+    [id] {
+        scroll-margin-top: $desktopHeaderHeight;
+    }
+}
+
+@import './typography.scss';
+
+@import 'grid.scss';
+@import 'button.scss';

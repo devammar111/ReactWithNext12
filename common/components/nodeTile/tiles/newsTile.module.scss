@@ -1,0 +1,19 @@
+@import '@styles/variables.scss';
+
+.newsTile {
+    background-color: $white;
+    width: 100%;
+
+    h6 {
+        color: $black;
+    }
+    &:hover, &:focus {
+        h6 {
+            color: $linkHoverColor;
+        }
+    }
+
+    .text {
+        padding: 2rem;
+    }    
+}

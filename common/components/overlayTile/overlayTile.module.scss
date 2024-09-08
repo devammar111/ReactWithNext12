@@ -1,0 +1,83 @@
+.overlayTile {
+    //background-color: rgba($white, .7);
+    background: linear-gradient(180deg, rgba(255,255,255,0.46) 0%, rgba(255,255,255,0.46) 100%);
+    backdrop-filter: blur(31px);
+    padding: 6rem 3rem 3rem;
+    max-width: 513px;
+    position: relative;
+    height: auto;
+
+    .circleLink:not(.chevronRight)::before {
+        border-color: #FFF;
+        content: '\f004';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .circle::before {
+        border-color: #FFF;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .circle_Icon {
+        display: inline-flex;
+        align-items: center;
+
+        &::before {
+            font-size: 16px;
+            border: 2px solid white;
+            display: inline-flex;
+            height: 45px;
+            width: 45px;
+            border-radius: 23px;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            transition: all .3s;
+        }
+
+        &:hover {
+            color: #FFF !important;
+        }
+
+        > span {
+            padding-left: 15px;
+            font-family: proxima-nova, sans-serif;
+            line-height: 21px;
+            display: flex;
+            flex-flow: column;
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .imageContainer {
+        position: relative;
+    }
+
+    .image {
+        position: absolute;
+        left: 0rem;
+        bottom: 1rem;
+    }
+
+
+
+
+    .playLink {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 700;
+
+        i {
+            font-size: 3rem;
+            margin-right: 1rem;
+        }
+    }
+}

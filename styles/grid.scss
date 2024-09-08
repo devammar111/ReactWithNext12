@@ -1,0 +1,17 @@
+.grid {
+    .stretchCells {
+        .area {
+            > .cell {
+                display: flex;
+                > div, > div > div {
+                    width: 100%;
+                    display: flex;
+                }
+
+                > div > div {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

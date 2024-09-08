@@ -1,0 +1,29 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.articleTile {
+
+    p {
+        border-top: 2px solid $red;
+        padding-top: 20px;
+    }
+    
+    a {
+        color: $red;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-weight: bold;
+    }
+
+    @include breakpoint(small) {
+        p, h5, a {
+            padding-left: 10px;
+        }
+    }
+
+    @include breakpoint(medium) {
+        p, h5, a {
+            padding-left: 0px;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+@import '../../../../../../styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetIconLinks {
+    padding: 3rem 0;
+
+    &.layoutFullHeight {
+        padding-top: 48rem;
+        background-repeat: no-repeat;
+        min-height: 1103px;
+
+        .container {
+            max-width: 80.5rem;
+        }
+
+        .tileLink {
+            backdrop-filter: blur(31px);
+            background: linear-gradient(180deg, rgba(178,51,78,0.46) 0%, rgba(178,51,78,0.46) 100%);
+            color: $white;
+            max-width: 302px;
+            min-height: 170px;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0.5rem 2rem 0.5rem;
+
+            i {
+                color: $white;
+                font-size: 3rem;
+                font-weight: 300;
+                margin-top: -2rem;
+            }
+
+            &:hover {
+                color: $white;
+                box-shadow: 0 0 15px rgba($black,.5);
+            }
+        }
+    }
+
+    .tileLink {
+        background-color: $white;
+        display: flex;
+        padding: 1rem;
+        color: $blue;
+        font-size: 1.125rem;
+        box-shadow: none;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        i {
+            font-weight: 400;
+            color: $red;
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        &:hover {
+            color: $blue;
+            box-shadow: 0 0 15px rgba($black,.5);
+        }
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .links {
+        justify-content: center;
+    }
+
+    .cell {
+        max-width: 240px;
+    }
+
+    &.layoutIconLinks {
+        //Need to style here for home page @zeeshan
+        .links{
+            justify-content: center !important;
+        }
+        .container {
+            max-width: 90.4375rem;
+        }
+
+        .cell {
+            max-width: 240px;
+            padding: 0 1rem;
+            margin-left: 0;
+            margin-right: 0 ;
+        }
+
+        .cell a{
+            max-width: 100%;
+        }
+
+    }
+
+    @include breakpoint(xlarge down) {
+        &.layoutFullHeight {
+            padding-top: 32rem;
+        }
+    }
+
+    @include breakpoint(medium) {
+        padding: 10rem 0;
+        position: relative;
+
+        .container {
+            max-width: 67.5rem;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: block;
+
+            &.vertical-center {
+                bottom: 50%;
+            }
+
+            &.vertical-top {
+                bottom: auto;
+                top: 0;
+            }
+
+            &.vertical-center {
+                transform: translateY(50%);
+            }
+
+            &.horizontal-center {
+                right: 50%;
+                transform: translateX(50%);
+
+                &.vertical-center {
+                    transform: translate3d(50%, 50%, 0);
+                }
+            }
+
+            &.horizontal-left {
+                right: auto;
+                left: 0;
+            }
+        }
+
+        .links {
+            justify-content: left;
+        }
+
+        .tileLink {
+            max-width: 240px;
+            min-height: 195px;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 3rem 2rem 2rem;
+
+            i {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    @include breakpoint(small only) {
+        &.layoutFullHeight {
+            padding-top: 15rem;
+
+            .tileLink {
+                min-height: 92px;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

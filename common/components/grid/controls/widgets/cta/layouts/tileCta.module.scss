@@ -1,0 +1,53 @@
+
+@import 'foundation-sites/scss/foundation.scss';
+@import "../../../../../../../styles/variables.scss";
+$background-color: white;
+.widgetCta {
+    &.layoutAlignCenter {
+        //background-color: #f5f4f2; /* Background color for the entire section */
+        height: 535px;
+        text-align: center;
+        border-radius: 8px;
+        .rte{
+            max-width: 550px;
+            margin: 0 auto;
+            margin-bottom: 35px;
+            position: relative;
+            top: 129px;
+        }
+        .circleLink{
+            top: 128px; 
+        }
+      }
+
+    &.layoutTile {
+        padding: 1.5rem 1rem 1rem;
+        position: relative;
+        background-color: $white;
+        .rte {
+            margin-bottom: 1rem;
+            flex: 1 1 auto;
+        }
+    
+        .secondaryImage {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    
+        @include breakpoint(medium) {
+            padding: 4rem 5rem 3.5rem;
+    
+            .rte {
+                margin-bottom: 3rem;
+                p{
+                    max-width: 370px;
+                }
+            }
+        }
+    }
+   
+}
+
+
+

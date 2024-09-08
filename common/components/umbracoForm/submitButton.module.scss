@@ -1,0 +1,87 @@
+@import '@styles/variables.scss';
+
+.submitButton {
+    position: relative;
+}
+
+.loadingIndicator {
+    color: #FFF;
+    position: relative;
+    top: 20px;
+    margin-top: -37px;
+}
+
+.button {
+    border-radius: 0;
+    min-height: 41px;
+    min-width: 150px;
+    font-family: $proximaNovaFont;
+    border-radius: 8px !important;
+    background-color: $red;
+    font-weight: 500;
+    margin: 69px 0 35px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: $darkRed;
+    }
+
+    &[disabled] {
+        background-color: $lightRed !important;
+    }
+}
+
+.closeButton {
+    background-color: $greyLight;
+    color: $black;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    position: absolute;
+    left: 93%;
+    top: 5%;
+
+    &:hover {
+        background-color: $red;
+    }
+}
+
+.btnClose {
+    border-radius: 0;
+    height: 40px;
+    width: 100px;
+    font-family: $proximaNovaFont;
+    border-radius: 8px !important;
+    background-color: $red;
+    font-weight: 500;
+    color: $white;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: $darkRed;
+    }
+}
+
+.btnDefault {
+    min-width: 100px;
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.mb-2 {
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 575px) {
+    .button {
+        margin-left: 0.5rem;
+    }
+
+}

@@ -1,0 +1,162 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetContact {
+    .contactWrapper {
+        .background {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .address, .hours p {
+            white-space: pre-wrap;
+        }
+        .address {
+            margin-bottom: 1.5rem;
+            line-height: 28px;
+        }
+        .content {
+            > a {
+                height: 43px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                max-width: 224px;
+                padding: 0 11px 0 21px;
+                margin-bottom: 43px;
+        
+                &::before {
+                    margin-right: 11px;
+                    width: 20px;
+                }
+            }
+        }
+        .phoneNumber {
+            margin-bottom: 29px;
+    
+            li {
+                font-weight: 600;
+                line-height: 28px;
+    
+                span,
+                a {
+                    font-weight: 400;
+                }
+            }
+        }
+        .hours {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+    
+            .icon {
+                margin-bottom: .75rem;
+                width: 42px;
+            }
+    
+            .hourTitle {
+                font-weight: 600;
+            }
+    
+            .hourTitle,
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        @include breakpoint(large up) {
+            .contentWrapper {
+                display: flex;
+                padding-right: 120px;
+                justify-content: flex-end;
+
+                .content {
+                    max-width: 367px;
+                    font-size: 18px;
+                    line-height: 28px;
+                }     
+            }
+
+            .formWrapper {
+                display: flex;
+                padding-left: 120px;
+                justify-content: flex-start;
+                padding-right: 40px;
+
+                .content {
+                    max-width: 480px;
+                }
+            }
+    
+            .hours {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+
+        &:not(.backofficeContactWrapper) {
+            @media (max-width: 1457px){
+                .formWrapper {
+                    display: flex;
+                    justify-content: center !important;
+                    padding-left: 40px !important;
+                    padding-right: 40px;
+                }
+                
+            }
+    
+            @media (max-width: 575px){
+                .formWrapper {
+                    padding-left: 20px !important;
+                    padding-right: 20px;
+    
+                    .content {
+                        width: 100%;
+                    }
+                }
+            }
+        
+            @include breakpoint(large down) {
+                > div {
+                    display: flex;
+                    justify-content: center;
+                }
+    
+                .contentWrapper {
+                    .content {
+                        max-width: 500px;
+                    }
+                }
+            }
+        }
+
+        &.backofficeContactWrapper {
+            @media (max-width: 1920px){
+                .formWrapper {
+                    padding-left: 20px !important;
+                    padding-right: 20px;
+    
+                    .content {
+                        width: 100%;
+                        margin: auto;
+                    }
+                }
+            }
+
+            @media (max-width: 1520px){
+                .formWrapper,
+                .contentWrapper {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

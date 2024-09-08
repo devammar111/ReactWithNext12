@@ -1,0 +1,110 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+.widgetTextWithBackground {
+    .backgroundImage {
+        padding: 110px 18px;
+    }
+
+    .anhcSec {
+        max-width: 705px;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    .iconsList {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .iconsDiv {
+        padding: 0 19px;
+
+        .icons {
+            font-size: 55px;
+            color: #FFFFFF;
+        }
+    }
+
+    h3 {
+        font-size: 70px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 80px;
+        color: #FFFFFF;
+        max-width: 615px;
+        margin: 0 auto 50px;
+        text-align: center !important;
+    }
+
+    p {
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin: 0 0 35px;
+        text-align: center !important;
+
+        span,
+        img {
+            // opacity: 0.641623 !important;
+
+            span {
+                opacity: 1 !important;
+            }
+        }
+    }
+}
+
+@media(max-width:767px){
+    .widgetTextWithBackground{
+        .backgroundImage{
+            padding: 75px 16px;
+        }
+        .anhcSec{
+            button {
+                height: 46px;
+                color: #B2334E;
+                font-size: 16px;
+                min-width: 170px;
+            }
+        }
+        .iconsList{
+            margin-bottom: 32px;
+        }
+        .iconsDiv{
+            padding: 0 12px;
+            .icons {
+                font-size: 48px;
+            }
+        }
+        h3{
+            font-size: 38px;
+            line-height: 47px;
+            margin: 0 auto 31px;
+            max-width: 350px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 25px;
+            margin: 0 0 30px;
+        }
+    }
+}
+
+@media(max-width:370px){
+    .widgetTextWithBackground{
+        .iconsDiv{
+            padding: 0 10px;
+            .icons {
+                font-size: 44px;
+            }
+        }
+        h3{
+            font-size: 36px;
+            line-height: 44px;
+            margin: 0 auto 28px;
+        }
+    }
+}

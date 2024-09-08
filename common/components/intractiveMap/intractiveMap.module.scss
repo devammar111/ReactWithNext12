@@ -1,0 +1,112 @@
+.mapContainer {
+    position: relative;
+    width: 100%;
+    //min-height: 1057px;
+    cursor: pointer;
+}
+
+.searchInput {
+    position: absolute;
+    top: 3rem;
+    right: 3.2rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    //border-radius: 5px;
+    background-color: white;
+    z-index: 1;
+    min-width: 400px;
+    height: 40px;
+}
+
+.searchBtn {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background: #2AEAE5;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBtn:hover {
+    background: #00fff7;
+}
+
+.buttonDiv {
+    padding: 0.15rem;
+    margin: 0.5rem;
+
+    &.active {
+        background-color: aqua;
+        width: fit-content;
+
+        button {
+            border-top-right-radius: 15px;
+        }
+    }
+
+    button {
+        background-color: #F3F3F3;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+
+    .buttonIcon {
+        padding: 0.5rem;
+    }
+
+    .buttonLabel {
+        padding-right: 0.5rem;
+    }
+}
+
+.bottomCenterButtons {
+    position: absolute;
+    bottom: 5rem;
+    display: flex;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    z-index: 1;
+}
+
+.fullScreen {
+    height: 100vh; /* Make the map go full screen */
+}
+
+.fullScreenButtons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: #FBFBFB;
+    min-width: 250px;
+    min-height: 55px;
+    color: #6BBDE5;
+    text-decoration: underline;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+@media (max-width:1200px) {
+    .bottomCenterButtons {
+        display: block;
+    right: 10px;
+    left: auto;
+    }
+}
+@media (max-width:600px) {
+    .searchInput {
+        min-width: auto;
+    }
+}

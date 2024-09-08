@@ -1,0 +1,237 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetFacilities {
+    &.layoutLeftAligned {
+        .container {
+            flex-direction: row;
+        }
+    }
+
+    &.layoutRightAligned {
+        .container {
+            flex-direction: row-reverse;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .leftPanel {
+        margin-right: $mediumGutters;
+        margin-top: 1.4rem;
+        position: relative;
+        max-width: 844px;
+        height: 790px;
+    }
+
+    .rightPanel {
+        margin-left: $mediumGutters;
+        margin-bottom: 0;
+    }
+
+    .mapTabs {
+        list-style: none;
+
+        li {
+            position: absolute;
+            bottom: 156px;
+            left: 30px;
+        }
+    }
+
+    .cell {
+        margin-bottom: 2rem;
+    }
+
+    .grid {
+        margin-bottom: -1rem;
+
+        a {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            color: $black;
+            opacity: 0.5;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            line-height: 28px;
+            font-family: $proximaNovaFont;
+            cursor: pointer;
+
+            &:hover, &:focus {
+                color: rgba($red, .5);
+                opacity: 0.8;
+            }
+
+            &.active {
+                color: $black;
+                opacity: 1;
+            }
+        }
+
+        a::before {
+            border: 2px solid #3A4667;
+            display: inline-flex;
+            height: 45px;
+            width: 45px;
+            border-radius: 23px;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -23px;
+        }
+    }
+
+    .customLink {
+        display: inline-flex;
+        border-radius: 50%;
+        align-items: center;
+        text-align: center;
+        color: $white;
+        height: 46px;
+        padding: 1.1rem;
+        margin-right: 1rem;
+        width: 46px;
+        background-color: $red;
+        cursor: pointer;
+        position: relative;
+
+        &.mapLink {
+            margin: 0;
+        }
+    }
+
+    .title {
+        margin-left: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tabs {
+        position: relative;
+        right: 1.7rem;
+        z-index: 1;
+        display: inline-flex;
+        flex-wrap: wrap;
+        border-radius: 11px;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    .tabs, .mapTabs {
+        a {
+            color: $black;
+            opacity: 0.5;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            line-height: 28px;
+            font-family: $proximaNovaFont;
+            cursor: pointer;
+
+            &:hover, &:focus {
+                color: rgba($red, .5);
+                opacity: 0.8;
+            }
+
+            &.active {
+                color: $black;
+                opacity: 1;
+            }
+        }
+    }
+
+    .tabsContent {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 0.6rem;
+    }
+
+    .richImage {
+        margin-top: 3rem;
+    }
+
+    .linkText {
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+
+    @include breakpoint(xlarge down) {
+
+        .mapTabs {
+            list-style: none;
+            display: block;
+            right: 0;
+        }
+
+        &.layoutLeftAligned, &.layoutRightAligned {
+            .container {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .rightPanel {
+            max-width: 100%;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .tabsContent {
+            padding-left: 0;
+        }
+
+        .leftPanel {
+            margin: 0;
+        }
+
+        .rightPanel {
+            margin: 0;
+        }
+
+        .title {
+            margin-left: 0;
+        }
+
+        .customLink {
+            margin-left: 0.3rem;
+        }
+    }
+
+    @include breakpoint(medium down) {
+
+        .mapLink {
+            height: 32px;
+            width: 32px;
+            padding: 0.7rem;
+        }
+
+        .tabsContent {
+            margin-left: 0;
+        }
+
+        .leftPanel {
+            height: auto;
+        }
+
+        .mapTabs {
+            li {
+                margin-bottom: -1rem;
+            }
+        }
+    }
+}

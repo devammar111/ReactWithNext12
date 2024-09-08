@@ -1,0 +1,392 @@
+@import './variables.scss';
+
+.button, .whiteButton,.defultRoundedButton {
+    padding: .75rem 1.25rem;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-align: center;
+}
+
+.button, .defultRoundedButton {
+    color: $buttonColor;
+    background-color: $buttonBackgroundColor;
+
+    &:hover, &:focus {
+        background-color: darken($buttonBackgroundColor, 10%);
+        color: $buttonColor;
+    }
+}
+.defultRoundedButton{
+    border-radius:8px;
+}
+.whiteButton {
+    color: $whiteButtonColor;
+    background-color: $whiteButtonBackgroundColor;
+
+    &:hover, &:focus {
+        color: $whiteButtonBackgroundColor;
+        background-color: $whiteButtonColor;
+    }
+}
+
+.button-round {
+    border-radius: 8px;
+    min-height: 50px;
+    min-width: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roundedButton {
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: 1px solid $roundedButtonColor;
+    border-radius: .5rem;
+    padding: 1.25rem 1rem;
+    min-width: 142px;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+        background-color: $roundedButtonColor;
+        color: $roundedButtonHoverColor
+    }
+}
+
+.circleLink {
+    font-size: 1.125rem;
+    color: $circleLinkColor;
+    position: relative;
+    min-height: 45px;
+    padding-left: 61px;
+    line-height: 1.75rem;
+
+    &:not(.stacked) {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &:not(.customIcon)::before, .bmg-icon {
+        content: '\f00a';
+        font-family: 'anhc';
+        font-weight: 700;
+        font-size: 1.5em;
+        border: 2px solid $circleLinkColor;
+        display: inline-flex;
+        height: 45px;
+        width: 45px;
+        border-radius: 23px;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        transition: all .3s;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -23px;
+    }
+
+    &:not(.customIcon)::before {
+        padding-top: 2px;
+    }
+
+    &.stacked {
+        text-align: center;
+        padding-left: 0;
+
+        &::before {
+            top: auto;
+            left: auto;
+            margin-top: auto;
+            padding-top: 0;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .emphasize {
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 1.1rem;
+        display: block;
+        text-transform: uppercase;
+    }
+    .emphasizeProximaNovaFont {
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 1.1rem;
+        display: block;
+        text-transform: uppercase;
+        font-family: $proximaNovaFont;
+    }
+
+    &:hover, &:active {
+        color: $circleLinkColor;
+
+        &::before, .bmg-icon {
+            color: $circleLinkHoverColor;
+            background-color: $circleLinkColor;
+        }
+    }
+
+    &.heartLink {
+        &::before {
+            content: '\f004';
+            font-size: 1em;
+        }
+    }
+    .bmg-icon-heart {
+        font-size: 1em;
+    }
+}
+.circleLinkWhite {
+    font-size: 1.125rem;
+    color: $darkCircleLinkColor;
+    position: relative;
+    min-height: 45px;
+    padding-left: 61px;
+    line-height: 1.75rem;
+
+    &:not(.stacked) {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &:not(.customIcon)::before, .bmg-icon {
+        content: '\f00a';
+        font-family: 'anhc';
+        font-weight: 700;
+        font-size: 1.5em;
+        border: 2px solid $darkCircleLinkColor;
+        display: inline-flex;
+        height: 45px;
+        width: 45px;
+        border-radius: 23px;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        transition: all .3s;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -23px;
+    }
+
+    &:not(.customIcon)::before {
+        padding-top: 2px;
+    }
+
+    &.stacked {
+        text-align: center;
+        padding-left: 0;
+
+        &::before {
+            top: auto;
+            left: auto;
+            margin-top: auto;
+            padding-top: 0;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .emphasize {
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+        display: block;
+        text-transform: uppercase;
+    }
+
+    &:hover, &:active {
+        color: $circleLinkColor;
+
+        &::before, .bmg-icon {
+            color: $circleLinkHoverColor;
+            background-color: $circleLinkColor;
+        }
+    }
+
+    &.heartLink {
+        &::before {
+            content: '\f004';
+            font-size: 1em;
+        }
+    }
+    .bmg-icon-heart {
+        font-size: 1em;
+    }
+}
+.directionsLink {
+    border: 1px solid $blue;
+    color: $blue;
+    border-radius: 7px;
+    font-family: $sofiaFont;
+    font-size: 1.125rem;
+    padding: .5rem 2rem .5rem 1.5rem;
+    min-width: 224px;
+    transition: all .3s;
+    &::before {
+        font-family: $iconFont;
+        content: '\f00e';
+        margin-right: 1rem;
+    }
+
+    &:hover {
+        background-color: $blue;
+        color: $white;
+    }
+}
+
+.previewButton {
+    position: fixed;
+    z-index: 10000;
+    bottom: 0;
+    left: 0;
+}
+
+.darkBackground {
+    .roundedButton {
+        border-color: $darkRoundedButtonColor;
+        color: $darkRoundedButtonColor;
+
+        &:hover, &:focus {
+            background-color: $darkRoundedButtonColor;
+            color: $darkRoundedButtonHoverColor;
+        }
+    }
+
+    .circleLink {
+        color: $darkCircleLinkColor;
+
+        &::before {
+            border-color: $darkCircleLinkColor;
+        }
+
+        &:hover, &:active {
+            color: $darkCircleLinkColor;
+
+            &::before {
+                color: $darkCircleLinkHoverColor;
+                background-color: $darkCircleLinkColor;
+            }
+        }
+    }
+    .circleLinkWhite {
+        color: $darkCircleLinkColor;
+
+        &::before {
+            border-color: $darkCircleLinkColor;
+        }
+
+        &:hover, &:active {
+            color: $darkCircleLinkColor;
+
+            &::before {
+                color: $darkCircleLinkHoverColor;
+                background-color: $darkCircleLinkColor;
+            }
+        }
+    }
+
+    .directionsLink {
+        border-color: $white;
+        color: $white;
+        &:hover {
+            color: $blue;
+            background-color: $white;
+        }
+    }
+}
+
+.blueBackground {
+    .roundedButton {
+        border-color: $blueBackgroundRoundedButtonColor;
+        color: $blueBackgroundRoundedButtonColor;
+
+        &:hover, &:focus {
+            background-color: $blueBackgroundRoundedButtonColor;
+            color: $blueBackgroundRoundedButtonHoverColor
+        }
+    }
+    .circleLinkWhite {
+        color: $blueBackgroundCircleLinkColor;
+
+        &::before {
+            border-color: $blueBackgroundCircleLinkColor;
+        }
+
+        &:hover, &:active {
+            color: $blueBackgroundCircleLinkColor;
+
+            &::before {
+                color: $blueBackgroundCircleLinkHoverColor;
+                background-color: $blueBackgroundCircleLinkColor;
+            }
+        }
+    }
+    .circleLink {
+        color: $blueBackgroundCircleLinkColor;
+
+        &::before {
+            border-color: $blueBackgroundCircleLinkColor;
+        }
+
+        &:hover, &:active {
+            color: $blueBackgroundCircleLinkColor;
+
+            &::before {
+                color: $blueBackgroundCircleLinkHoverColor;
+                background-color: $blueBackgroundCircleLinkColor;
+            }
+        }
+    }
+}
+.orangeButton {
+    min-height: 50px;
+    max-width: 196px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $orange;
+
+    &:hover, &:focus {
+        background-color: $lightOrange;
+    }
+
+    img {
+        max-width: 120px !important;
+        min-height: 21px !important;
+    }
+}
+.whiteRoundedButton {
+    height: 50px;
+    border-radius: 8px;
+    background-color: $white;
+    color: $red !important;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 22px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 5px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        color: $darkRed !important;
+        background-color: $offWhite;
+    }
+}

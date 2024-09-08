@@ -1,0 +1,147 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetProductDetail {
+    .productContainer {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 100px;
+    }
+
+    .productDescription{
+        margin-top: 18px;
+        h5{
+            margin-bottom: 14px !important;
+        }
+    }
+
+    .productImage {
+        width: 50%;
+    }
+
+    .productDetail {
+        width: 50%;
+        max-width: 500px;
+
+        h5{
+            margin-bottom: 37px;
+            margin-top: -7px;;
+            }
+    }
+
+    .productImagePreviewContainer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        margin-top: 80px;
+    }
+
+    .productImagePreview {
+        max-width: 400px;
+    }
+
+    .buttonContainer {
+        display: flex;
+        gap: 48px;
+        margin-top: 34px;
+    }
+
+    .addToCartButton {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #b2334e;
+        color: #ffffff;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .addToWishList {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #a5acc1;
+        color: #ffffff;
+        margin-bottom: 30px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .textInputQuanity {
+        height: 39px !important;
+        padding-left: 2px;
+        padding-right: 2px;
+
+    }
+
+    .descriptionText {
+        color: #b74059;
+    }
+
+    @include breakpoint (medium down) {
+        .productContainer {
+            gap: 20px;
+        }
+
+        .productImagePreviewContainer {
+            grid-template-columns: auto auto;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .productContainer {
+            display: block;
+        }
+
+        .productImage {
+            width: 100%;
+        }
+
+        .productDetail {
+            width: 100%;
+        }
+
+        .productDetail {    
+            h5{
+                margin-bottom: 17px;
+                margin-top: 22px;;
+                }
+        }
+
+        .productDescription{
+            margin-top: 18px;
+        }
+    }
+
+} 
+
+.cartForm {
+
+    button{
+        font-size: 1.125rem;
+    font-family: "proxima-nova", sans-serif;
+        height: 40px !important;
+        width: 50px;
+        padding: 0;
+        margin: 0 10px;
+        background-color: #a5acc1;
+    }
+
+    button:hover {
+        background-color: #b2334e;
+    }
+
+   input {
+        height: 40px !important;
+        padding: 0 15px !important;
+    }
+}

@@ -1,0 +1,55 @@
+@import '@styles/variables.scss';
+
+.widgetLinkBar {
+    background-color: $greyLight;
+
+    &.layoutRectangleButtons {
+        background-color: $blue;
+        padding: 70px 0;
+
+        .rectangleButtonWrapper {
+            width: fit-content;
+            margin: auto;
+            display: flex;
+            gap: 33px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .rectangleButton {
+                height: 66px;
+                border: 1px solid $white;
+                border-radius: 8px;
+                padding: 0 17px;
+                line-height: 64px;
+                color: white;
+                font-family: $barlowFont;
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-align: center;
+
+            }
+        }
+    }
+
+    .cell {
+        margin-bottom: 2rem;
+    }
+
+    .grid {
+        margin-bottom: -2rem;
+    }
+
+    .textHeading{
+        p {
+            text-transform: uppercase;
+            color: #3A4667;
+            font-weight: 600;
+            font-size: 18px;
+
+            strong {
+                font-weight: 600;
+            }
+        }
+    }
+}

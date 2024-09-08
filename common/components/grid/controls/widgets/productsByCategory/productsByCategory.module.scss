@@ -1,0 +1,464 @@
+// @import "@styles/variables.scss";
+
+// .widgetProductsByCategory {
+//   h3 {
+//     margin-bottom: 2rem;
+//   }
+
+//   .linkBarContainer {
+//     background-color: $blue;
+//     padding: 70px 0;
+//   }
+
+//   .rectangleButtonWrapper {
+//     width: fit-content;
+//     margin: auto;
+//     display: flex;
+//     gap: 32px;
+//     flex-wrap: wrap;
+//     justify-content: center;
+
+//     .rectangleButton {
+//       height: 66px;
+//       min-width: 170px;
+//       border: 1px solid $white;
+//       border-radius: 8px;
+//       padding: 0 17px;
+//       line-height: 64px;
+//       color: white;
+//       font-family: $barlowFont;
+//       font-size: 16px;
+//       font-weight: bold;
+//       letter-spacing: 2px;
+//       text-align: center;
+//     }
+//   }
+// }
+
+// .product_category_slider {
+//   max-width: 90.4375rem;
+//   // margin: 0 auto;
+//   position: relative;
+//   padding-left: 1.25rem;
+//   padding-right: 1.25rem;
+//   margin-top: 85px;
+//   margin-bottom: 85px;
+// }
+
+// @media all and (max-width: 991px) {
+//   .product_category_slider {
+//     margin-top: 64px;
+//     margin-bottom: 64px;
+//   }
+// }
+
+// @media all and (max-width: 630px) {
+//   .rectangleButton {
+//     min-width: 100% !important;
+//     max-width: 100% !important;
+//   }
+// }
+
+// .productsCategory {
+//   margin-left: -15px;
+//   margin-right: -15px;
+
+//   .imageTile {
+//     width: 100%;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     box-sizing: border-box;
+//     cursor: pointer;
+
+//     .swiperImg {
+//       width: 100%;
+
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+
+//     h6 {
+//       color: $blackLight;
+//       font-family: $proximaNovaFont;
+//       font-size: 18px;
+//       font-weight: bold;
+//       letter-spacing: 1.5px;
+//       line-height: 28px;
+//       text-transform: uppercase;
+//     }
+
+//     &:hover,
+//     &:focus {
+//       h6 {
+//         color: $linkHoverColor;
+//       }
+//     }
+
+//     .text {
+//       margin-top: 28px;
+//     }
+//   }
+
+//   .swiper-button-prev {
+//     height: 70px;
+//     width: 70px;
+//     background-color: #ffffff;
+//     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+//     border-radius: 50%;
+//     font-weight: 900;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 30px;
+//     color: #b2334e;
+//     cursor: pointer;
+//   }
+
+//   .swiper-button-next {
+//     height: 70px;
+//     width: 70px;
+//     background-color: #ffffff;
+//     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+//     border-radius: 50%;
+//     font-weight: 900;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 30px;
+//     color: #b2334e;
+//     cursor: pointer;
+//   }
+
+//   .swiper-button-disabled {
+//     display: none !important;
+//   }
+// }
+
+// .viewAllContainer {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+//   margin-top: 40px;
+
+//   .chevronContainer {
+//     width: 30px;
+//     height: 30px;
+//     border-radius: 50%;
+//     border: 1px solid $black;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     & i {
+//       color: $blackLight;
+//     }
+//   }
+
+//   .viewAll {
+//     line-height: 18px;
+
+//     .category {
+//       text-transform: uppercase;
+//     }
+
+//     .view {
+//       font-size: 12px;
+//       line-height: 12px;
+//     }
+//   }
+// }
+
+
+
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+$swiperSizeLarge: 70px;
+$swiperSizeMedium: 50px;
+$swiperSizeSmall: 40px;
+
+.nodeCarousel {
+
+  position: relative;
+
+  .swiperProductContainer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+  }
+
+  .linkBarContainer {
+    background-color: $blue;
+    padding: 70px 0;
+  }
+
+  .rectangleButtonWrapper {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .rectangleButton {
+      height: 66px;
+      min-width: 170px;
+      border: 1px solid $white;
+      border-radius: 8px;
+      padding: 0 17px;
+      line-height: 64px;
+      color: white;
+      font-family: $barlowFont;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+  }
+
+
+  .newTitle {
+    color: $black;
+  }
+
+  .nodeSwiper {
+    position: unset !important;
+    overflow: visible;
+    width: 100%;
+  }
+
+  .swipernext,
+  .swiperprev {
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: $red;
+    cursor: pointer;
+  }
+
+  .swipernext {
+    right: 0;
+  }
+
+  .swipernext::after,
+  .swiperprev::after {
+    content: '';
+  }
+
+  .swipernext:hover,
+  .swiperprev:hover {
+    background-color: $greyLighter;
+  }
+
+  @include breakpoint(small) {
+
+    .swipernext,
+    .swiperprev {
+      height: $swiperSizeSmall;
+      width: $swiperSizeSmall;
+      margin-top: 0px;
+    }
+
+    .swiperprev {
+      margin-left: -0.3rem;
+    }
+
+    .swipernext {
+      margin-right: -0.3rem;
+    }
+  }
+
+  @include breakpoint(medium) {
+
+    .swipernext,
+    .swiperprev {
+      height: $swiperSizeMedium;
+      width: $swiperSizeMedium;
+      margin-top: 10px;
+    }
+
+    .swiperprev {
+      margin-left: -1rem;
+    }
+
+    .swipernext {
+      margin-right: -1rem;
+    }
+  }
+
+  @include breakpoint(xxxlarge) {
+
+    .swipernext,
+    .swiperprev {
+      height: $swiperSizeLarge;
+      width: $swiperSizeLarge;
+      margin-top: 0px;
+    }
+
+    .swiperprev {
+      margin-left: -13%;
+    }
+
+    .swipernext {
+      margin-right: -13%;
+    }
+  }
+
+  &.nodeCarouselBo {
+    @include breakpoint(small) {
+      .swipernext {
+        right: 5%;
+      }
+
+      .swiperprev {
+        left: 5%;
+      }
+    }
+
+    @include breakpoint(medium) {
+      .swipernext {
+        right: 10%;
+      }
+
+      .swiperprev {
+        left: 10%;
+      }
+    }
+
+    @include breakpoint(xxxlarge) {
+      .swipernext {
+        right: 20%;
+      }
+
+      .swiperprev {
+        left: 20%;
+      }
+    }
+  }
+
+
+
+  .viewAllContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+  
+    .chevronContainer {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid $black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      & i {
+        color: $blackLight;
+      }
+    }
+  
+    .viewAll {
+      line-height: 18px;
+  
+      .category {
+        text-transform: uppercase;
+      }
+  
+      .view {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+
+
+  
+
+
+
+
+
+
+
+}
+
+.variantStandard {
+
+  .nodeSwiper {
+    position: relative !important;
+
+  }
+
+  .swipernext,
+  .swiperprev {
+    @include breakpoint(small) {
+      top: calc((100% - 64px) / 2 - $swiperSizeSmall / 2);
+    }
+
+    @include breakpoint(medium) {
+      top: calc((100% - 64px) / 2 - $swiperSizeMedium / 2);
+    }
+
+    @include breakpoint(xxxlarge) {
+      top: calc((100% - 64px) / 2 - $swiperSizeLarge / 2);
+    }
+  }
+
+  h3 {
+    color: $black;
+    letter-spacing: 0;
+    line-height: 80px;
+    margin-bottom: 40px;
+  }
+}
+
+
+.viewAllContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+
+  .chevronContainer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & i {
+      color: $blackLight;
+    }
+  }
+
+  .viewAll {
+    line-height: 18px;
+
+    .category {
+      text-transform: uppercase;
+    }
+
+    .view {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+

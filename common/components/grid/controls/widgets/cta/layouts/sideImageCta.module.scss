@@ -1,0 +1,119 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetCta {
+    &.variantSideImage {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $greyLighter;
+
+        .leftPanel {
+            padding-right: $largeGutters;
+            display: flex;
+            align-items: center;
+
+            .contentSec {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        }
+
+        .rightPanel {
+            padding-left: $largeGutters;
+            position: relative;
+
+            @include breakpoint(large down) {
+                justify-content: center;
+            }
+        }
+
+
+        @include breakpoint(xlarge down) {
+            .imageContainer {
+                max-width: 580px;
+            }
+        }
+
+        @include breakpoint(large up) {
+            &.variantSideImage {
+                .container {
+                    width: 90.4375rem;            
+                }
+                .rightPanel {
+                    .image {
+                        @include breakpoint(large up) {
+                            position: absolute;
+                            &.posTopLeft {
+                                top: 0;
+                                left: 0;
+                            }
+                            &.posTopCenter {
+                                top: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                            &.posTopRight {
+                                top: 0;
+                                right: 0;
+                            }
+                            &.posCenterLeft {
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 0;
+                            }
+                            &.posCenterCenter {
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            &.posCenterRight {
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 0;
+                            }
+                            &.posBottomLeft {
+                                bottom: 0;
+                                left: 0;
+                            }
+                            &.posBottomCenter {
+                                bottom: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                            &.posBottomRight {
+                                bottom: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        @include breakpoint(medium down) {
+            display: inline;
+
+            &.variantSideImage {
+                .leftPanel {
+                    padding-right: 0;
+                }
+
+                .rightPanel {
+                    padding-left: 0;
+
+                    .image {
+                        max-width: 100%;
+                        display: flex;
+                        align-items: flex-end;
+                        margin-bottom: -1px;
+                        height: auto !important;
+                    }
+                }
+            }
+        }
+    }
+}

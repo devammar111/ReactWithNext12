@@ -1,0 +1,240 @@
+a {
+    color: $linkColor;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .3s;
+
+    &:hover {
+        color: $linkHoverColor;
+    }
+}
+
+h1 {
+    font-size: 3.125rem;
+    line-height: 3.75rem;
+    font-weight: 300;
+    font-family: $arponaFont;
+    margin-bottom: 2rem;
+    letter-spacing: 0;
+
+    .emphasize {
+        font-size: 4.375rem;
+        font-weight: bold;
+        line-height: 5rem;
+        font-family: $marydaleFont;
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: $arponaFont;
+    font-weight: 300;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0;
+
+    .emphasize {
+        font-size: 4.375rem;
+        line-height: 4.375rem;
+        font-family: $marydaleFont;
+    }
+}
+
+h3 {
+    font-size: 4.375rem;
+    font-weight: bold;
+    line-height: 5rem;
+    font-family: $marydaleFont;
+    letter-spacing: 0;
+}
+
+h3 {
+    margin-bottom: 2.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-family: $proximaNovaFont;
+    font-weight: bold;
+    line-height: 1.875rem;
+    letter-spacing: 0.125rem;
+    margin-bottom: 1.5rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+    font-family: $proximaNovaFont;
+    line-height: 1.75rem;
+    letter-spacing: 0.125rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    .emphasize {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        font-family: $marydaleFont;
+    }
+}
+
+h6 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    font-family: $proximaNovaFont;
+
+    .emphasize {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        font-family: $marydaleFont;
+    }
+}
+
+.smallText {
+    font-size: 1rem;
+    line-height: 1.625rem;
+}
+
+.redText {
+    color: $red;
+}
+
+.linkText {
+    color: $mapLinkColor;
+    font-family: $arponaFont
+}
+
+.whiteText {
+    color: $white;
+}
+
+.lightBlackText {
+    color: $blackLight;
+}
+
+.blackBoldText {
+    color: $textColor;
+    font-family: $proximaNovaFont;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+.blueText {
+    color: $blue;
+}
+
+.lightBlueText {
+    color: $mapLinkColor;
+}
+
+img {
+    display: inline-block;
+}
+
+.noBullets {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.noMargin {
+    margin: 0;
+}
+
+.capWidth {
+    width: 100%;
+    max-width: 537px;
+}
+
+h1, h2, h3 {
+    &.capWidth {
+        max-width: 659px;
+        width: auto;
+    }
+
+    &.narrowCapWidth {
+        max-width: 515px;
+        width: auto;
+    }
+
+    &.textNoWrap {
+        text-wrap: nowrap;
+    }
+}
+
+.wideCapWidth {
+    max-width: 960px;
+}
+
+.narrowCapWidth {
+    max-width: 370px;
+}
+
+.redUnderline {
+    &::after {
+        content: '';
+        display: block;
+        background-color: $red;
+        height: 10px;
+        width: 280px;
+        max-width: 80%;
+        margin-top: .75em;
+    }
+}
+
+.darkBackground {
+    color: $darkTextColor;
+
+    a:not(.button,.whiteButton,.circleLink) {
+        color: $darkLinkColor;
+
+        &:hover, &:focus {
+            color: $darkLinkHoverColor;
+        }
+    }
+}
+
+.blueBackground {
+    background-color: $blue;
+    color: $blueBackgroundTextColor;
+
+    a:not(.button,.whiteButton,.circleLink) {
+        color: $blueBackgroundLinkColor;
+
+        &:hover, &:focus {
+            color: $blueBackgroundLinkHoverColor;
+        }
+    }
+}
+
+.normalFontWeight {
+    font-weight: normal;
+}
+
+@media (max-width:1483px) {
+    h1, h2, h3 {
+        &.textNoWrap {
+            text-wrap: balance;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    h1 {
+        font-size: 2.2rem;
+        line-height: 2.9rem;
+    }
+
+    h3 {
+        font-size: 2.58rem;
+        line-height: 2.8rem;
+        margin-bottom: 1.75rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+}

@@ -1,0 +1,97 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetRichTextPair {
+    margin-bottom: 2rem;
+    background-size: cover;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+    
+    img {
+        height: auto !important;
+    }
+
+    
+    @include breakpoint(large up) {
+        &.layoutRoundedCorner {
+            .container {
+                gap: 80px;
+            }
+
+            .leftPanel {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 50px;
+            }
+
+            .leftPanel h3 {
+                text-wrap: nowrap;
+            }
+
+            .rightPanel {
+                width: 50%;
+                display: flex;
+                align-items: center;
+            }
+        }
+        &.layoutRichTextPair {
+            .container {
+                gap: 120px;
+            }
+
+            .leftPanel,
+            .rightPanel {
+                width: 50%;
+                max-width: 521px;
+            }
+        }
+    }
+
+    @include breakpoint(xxlarge up) {
+        &.layoutRoundedCorner {    
+            .leftPanel {
+                padding-left: 90px;                
+            }
+            .rightPanel {
+                padding-right: 90px;                
+            }
+        }
+    }
+
+    @include breakpoint(large only) {
+
+        .leftPanel {
+            margin-right: $largeGutters;
+        }
+
+        .rightPanel {
+            margin-left: $largeGutters;
+        }
+    }
+
+    @include breakpoint(medium down) {
+
+        .container {
+            display: block;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        .leftPanel {
+            width: 100% !important;
+        }
+
+        .rightPanel {
+            width: 100% !important;
+            margin-top: 3rem;
+        }
+    }
+}

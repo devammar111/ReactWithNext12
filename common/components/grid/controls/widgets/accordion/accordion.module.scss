@@ -1,0 +1,191 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetAccordion {
+    &.layoutPlusIcon {
+        max-width: 1109px;
+
+        .item {
+            border-bottom: 1px solid $blueLight;
+            padding: .69rem 0;
+
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+
+        .expandedIcon,
+        .collapsedIcon {
+            width: 30px;
+            height: 30px;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $red;
+            font-size: 29px;
+        }
+
+        .MuiAccordionSummary-content {
+            margin: 12px 0;
+        }
+
+        .details {
+            padding: 0;
+            margin-right: calc(13% - 0.625rem);
+            margin-left: -0.625rem;
+
+            @media print, screen and (min-width: 40em) {
+                margin-right: calc(13% - 1.25rem);
+                margin-left: -1.25rem;
+            }
+
+            @media print, screen and (min-width: 64em) {
+                margin-right: calc(13% - 2.5rem);
+                margin-left: -2.5rem;
+            }
+        }
+    }
+
+    &.layoutStandard {
+        .details {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: -#{map-get($grid-margin-gutters, small) / 2};
+            margin-right: -#{map-get($grid-margin-gutters, small) / 2};
+            padding-bottom: 0;
+        }
+
+        @include breakpoint(medium) {
+            .item {
+                padding: 2.5rem 0;
+            }
+
+            .details {
+                margin-left: -#{map-get($grid-margin-gutters, medium) / 2};
+                margin-right: -#{map-get($grid-margin-gutters, medium) / 2};
+            }
+        }
+    }
+
+    &.layoutBackground {
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .item {
+            border-bottom: 1px solid $blueLight;
+            padding: .69rem 0;
+            min-width: 993px;
+            min-height: 104px;
+            background-color: $offWhite;
+            margin: 1rem;
+
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+
+        .centeredLayout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 11.375rem 0;
+        }
+
+        .expandedIcon,
+        .collapsedIcon {
+            width: 30px;
+            height: 30px;
+            color: $red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $white;
+            font-size: 29px;
+            margin: 0 2rem;
+        }
+
+        .MuiAccordionSummary-content {
+            margin: 12px 2rem;
+        }
+
+        .title {
+            color: $black;
+        }
+
+        .summary {
+            padding-left: 7.5rem;
+            padding-top:0.8rem;
+        }
+
+        .details {
+            padding: 0 5rem;
+        }
+    }
+
+    .item {
+        box-shadow: none;
+        border-bottom: 1px solid $greyLight;
+        margin: 0;
+        padding: 1.5rem 0;
+
+        &::before {
+            display: none;
+        }
+
+        &:last-child {
+            border-width: 0;
+        }
+    }
+
+    .title {
+        color: $red;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: #000000;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 28px;
+    }
+
+    .chevronDown {
+        background-color: $red;
+        color: $white;
+    }
+
+    .chevronUp {
+        background-color: $greyLight;
+        color: $red;
+    }
+
+    .summary {
+        padding: 0;
+    }
+
+    @include breakpoint(medium down) {
+        &.layoutBackground {
+            .item {
+                min-width: 100%;
+            }
+
+            .centeredLayout {
+                padding: 2rem 0;
+            }
+
+            .summary {
+                padding-left: 2rem;
+            }
+
+            .details {
+                padding: 0 2rem;
+            }
+        }
+    }
+}

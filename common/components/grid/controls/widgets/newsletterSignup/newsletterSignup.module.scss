@@ -1,0 +1,45 @@
+@import "@styles/variables.scss";
+
+.widgetNewsletterSignup {
+  form {
+    display: flex;
+    width: 600px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    text-align: center;
+    font-weight:400;
+    margin-bottom: 52px;
+    font-size:38px;
+  }
+
+  input {
+    font-family: $proximaNovaFont;
+    font-size: 18px;
+    letter-spacing: 0;
+    color: #000000;
+    padding: 10px 20px;
+    flex: 1 1 auto;
+    margin-right: 20px;
+    border-width: 0;
+    border-radius: 0.5rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .button {
+    font-family: $proximaNovaFont;
+    border-radius: 0.5rem;
+    padding-top: 15px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    min-width: 175px;
+    letter-spacing: 2px;
+  }
+}

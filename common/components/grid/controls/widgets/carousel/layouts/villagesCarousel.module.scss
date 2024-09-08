@@ -1,0 +1,141 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetCarousel {
+    &.variantVillages {
+        position: relative;
+        background-position: right 0 top -1%;
+        background-repeat: no-repeat;
+        padding-top: 2rem;
+
+        .villageTitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 4rem;
+            text-align: center;
+            flex-direction: column;
+            width: 1154px;
+            max-width: 100%;
+        }
+
+        .imageDiv {
+            filter: drop-shadow(0 0 0.75rem #BEBEBE);
+
+            img {
+                border-radius: 8px;
+            }
+        }
+
+        .villageMap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: row;
+        }
+
+        .nodeSwiper {
+            position: unset !important;
+            overflow: visible;
+            width: 100%;
+            padding: 0rem 10rem;
+        }
+
+        .swipernext, .swiperprev {
+            position: absolute;
+            top: 52%;
+            z-index: 9;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 12px 0 rgba(0,0,0,0.5);
+            border-radius: 50%;
+            font-weight: 900;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: $red;
+            cursor: pointer;
+            height: 70px;
+            width: 70px;
+        }
+
+        .swipernext {
+            right: 2rem;
+        }
+
+        .swiperprev {
+            left: 2rem;
+        }
+
+        .swipernext::after, .swiperprev::after {
+            content: '';
+        }
+
+        .swipernext:hover, .swiperprev:hover {
+            background-color: $greyLighter;
+        }
+
+        .chevronUp {
+            font-size: xx-large;
+            color: $red;
+        }
+
+        .carouselHeading {
+            max-width: 594px;
+        }
+
+        @include breakpoint(xlarge down) {
+
+            .swipernext, .swiperprev {
+                height: 50px;
+                width: 50px;
+                top: 55%;
+            }
+
+            .nodeSwiper {
+                padding: 2rem;
+            }
+        }
+
+        @include breakpoint(medium down) {
+
+
+            .swipernext, .swiperprev {
+                height: 40px;
+                width: 40px;
+                top: 56%;
+            }
+
+            .nodeSwiper {
+                padding: 1.5rem;
+            }
+
+            .villageTitle {
+                padding: 0 0 2rem;
+            }
+        }
+
+        @include breakpoint(small only) {
+
+            .swipernext, .swiperprev {
+                top: 58%;
+            }
+
+            .swipernext {
+                right: 1rem;
+            }
+
+            .swiperprev {
+                left: 1rem;
+            }
+        }
+
+        @include breakpoint(xxxlarge) {
+
+            .swiperSlide {
+                margin-right: 40px !important;
+            }
+        }
+    }
+}

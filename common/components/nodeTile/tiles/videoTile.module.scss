@@ -1,0 +1,51 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.videoTile {
+    display: block;
+    width: 100%;
+
+    .text {
+        margin-top: 1rem;
+        display: flex;
+        text-align: left;
+
+        i {
+            font-size: 1.75rem;
+            margin-right: .75rem;
+        }
+    }
+
+    h5 {
+        color: $black;
+    }
+
+    img {
+        overflow: hidden;
+        border-radius: 7px;
+        opacity: .9;
+        transition: opacity .3s;
+    }
+
+    &:hover, &:focus {
+        img {
+            opacity: 1;
+        }
+    }
+
+    @include breakpoint(xlarge down) {
+        max-width: 419px;
+        min-width: auto;
+    }
+
+    @include breakpoint(medium) {
+        .text {
+            margin-top: 2.5rem;
+        }
+    }
+
+    @include breakpoint(small only) {
+        max-width: 100%;
+    }
+}
+   

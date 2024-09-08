@@ -1,0 +1,43 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.grid {
+    .stretchCells {
+        .area {
+            > .cell {
+                display: flex;
+            }
+        }
+    }
+
+    .row {
+        background-size: cover;
+    }
+
+    .widgetWithBackground {
+        position: absolute;
+        min-height: calc(100% - 5rem);
+        z-index: -1;
+        width: 100%;
+
+        &.paddingApplied {
+            min-height: 100%;
+        }
+    }
+
+    .rowWithBackground {
+        position: relative;
+    }
+
+    @include breakpoint(medium only) {
+        .widgetWithBackground {
+            min-height: calc(100% - 2.5rem);
+        }
+    }
+
+    @include breakpoint(small only) {
+        .widgetWithBackground {
+            min-height: calc(100% - 1.25rem);
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.row {
+    .text {
+        > div {
+            padding: #{rem-calc(map-get($grid-margin-gutters, small) / 2)}
+        }
+    }
+
+
+
+    @include breakpoint (large) {
+        display: flex;
+        > div {
+            flex: 0 0 50%;
+        }
+
+        .text {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .media {
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                padding-top: 83.333333%;
+            }
+            > div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                > div {
+                    height: 100%;
+                }
+            }
+        }
+
+        .image {
+            background-size: cover;
+            > span {
+                display: none !important;
+            }
+        }
+
+        .textContainer {
+            width: 100%;
+            >div {
+                max-width: 420px;
+            }
+        }
+        &:nth-child(2n+1) {
+            flex-direction: row-reverse;
+        };
+        &:nth-child(2n) {
+            
+            .text {
+                justify-content: flex-start;
+            }
+
+            .textContainer {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    @media screen and (min-width: $grid-container) {
+        $mediumSize: rem-calc(map-get($grid-margin-gutters, medium) / 2);
+        .textContainer {
+            padding: $mediumSize 12.875rem $mediumSize $mediumSize;
+            width: $grid-container / 2;
+        }
+        &:nth-child(2n) {
+            .textContainer {
+                padding: $mediumSize $mediumSize $mediumSize 12.875rem;
+            }
+        };
+    }
+}

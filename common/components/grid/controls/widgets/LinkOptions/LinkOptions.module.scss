@@ -1,0 +1,140 @@
+@import '@styles/variables.scss';
+.widgetLinkOptions {
+    .videoPhotoUsage {
+        background: $red;
+        text-align: center;
+        padding: 55px 15px;
+        margin: 0 -0.9375rem;
+        position: relative;
+        z-index: 9;
+    }
+
+    .videoPhotoUsage *, .flexRow * {
+        font-family: $proximaNovaFont;
+    }
+
+    .videoPhotoUsage > div {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .videoPhotoSec h4 {
+        color: $white;
+        font-size: 24px;
+        letter-spacing: 2px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 12px;
+
+        strong {
+            font-weight: inherit;
+        }
+    }
+
+    .videoPhotoSec p {
+        color: $white;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 28px;
+        text-align: center;
+        max-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .videoPhotoSec p + p {
+        margin-bottom: 0 !important;
+    }
+
+    .videoPhotoSec .flexRow p {
+        margin: 0 0 28px;
+    }
+
+    .videoPhotoSec .contactBtn {
+        color: $white;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        line-height: 28px;
+        text-decoration: none;
+    }
+
+    .flexRow {
+        display: flex;
+        align-items: center;
+        padding-top: 42px;
+    }
+
+    .flexRow .colLeft, .flexRow .colRight {
+        width: 42%;
+    }
+
+    .flexRow .moreOption {
+        height: 70px;
+        width: 70px;
+        border: 1px solid $white;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        color: $white;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 28px;
+        text-align: center;
+        margin: 0 30px;
+    }
+
+    .colLeft a {
+        color: $white;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        line-height: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        padding: 5px 10px 5px 62px;
+
+        &::before {
+            border-color: $white;
+        }
+
+        &:hover::before {
+            background-color: $white;
+            color: #B2334E;
+        }
+    }
+
+
+    @media (max-width:767px) {
+        .flexRow {
+            display: flex;
+            padding-top: 36px;
+            flex-wrap: wrap;
+        }
+
+        .flexRow .colLeft, .flexRow .colRight {
+            width: 100%;
+        }
+
+        .flexRow > div {
+            width: 100%;
+        }
+
+        .flexRow .moreOption {
+            width: 60px;
+            height: 60px;
+            font-size: 18px;
+            margin: 25px 0;
+        }
+
+        .videoPhotoUsage {
+            padding: 55px 15px;
+            margin: 0 0 30px;
+        }
+    }
+}

@@ -1,0 +1,182 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetTabs {
+    &.variantStandard {
+        position: relative;
+        background-position: right 0 bottom 3%;
+        background-repeat: no-repeat;
+
+        .tabsContainer {
+            text-align: center;
+        }
+
+        .tabsContent {
+            text-align: center;
+        }
+
+        .tabs {
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            flex-wrap: wrap;
+            border-radius: 11px;
+            justify-content: space-between;
+            list-style: none;
+
+            a {
+                color: $greyDark;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                display: block;
+                min-width: 237px;
+                padding: 1rem 1rem 0rem;
+                border-radius: 11px;
+
+                &:hover, &:focus {
+                    color: rgba($red, .5);
+                }
+
+                &.active {
+                    color: $red;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        hr {
+            min-height: 44vh;
+            max-width: 0vw;
+            border-width: 0;
+            border: 1px solid #A4ACC1;
+            position: relative;
+            margin-top: -127%;
+            left: 60%;
+        }
+
+        .locationContent {
+            //padding-left: 7rem;
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint(xlarge down) {
+
+            hr {
+                display: none;
+            }
+        }
+
+        @include breakpoint(large down) {
+            background-image: none !important;
+
+            .tabs {
+                display: block;
+            }
+
+            .tabsContent {
+                display: block;
+
+                .cell {
+                    margin-left: $largeGutters;
+                    margin-right: $largeGutters;
+                }
+            }
+        }
+    }
+
+    &.layoutLocations {
+        position: relative;
+        background-position: right 0 bottom 3%;
+        background-repeat: no-repeat;
+        min-height:762px;
+
+        .locationContentContainer {
+            width: 100%;
+        }
+
+        .tabsContainer {
+            text-align: center;
+        }
+
+        .tabsContent {
+            text-align: center;
+        }
+
+        .tabs {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 11px;
+            justify-content: space-around;
+            list-style: none;
+
+            a {
+                color: #888;
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 30px;
+                display: block;
+                // min-width: 237px;
+                padding: 1rem 2rem 0rem;
+                border-radius: 11px;
+                text-transform: uppercase;
+
+                &:hover, &:focus {
+                    color: rgba($red, .5);
+                }
+
+                &.active {
+                    color: $red;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        hr {
+            min-height: 44vh;
+            max-width: 0vw;
+            border-width: 0;
+            border: 1px solid #A4ACC1;
+            position: relative;
+            margin-top: -127%;
+            left: 60%;
+        }
+
+        .locationContent {
+            //padding-left: 7rem;
+            margin-bottom: 0;
+            border-right: 1px solid #A4ACC1;
+            padding-bottom: 26px;
+        }
+
+        .locationContent:nth-child(3n+3) {
+            border-right: none;
+        }
+
+        @include breakpoint(xlarge down) {
+
+            hr {
+                display: none;
+            }
+        }
+
+        @include breakpoint(large down) {
+            background-image: none !important;
+
+            .tabs {
+                display: block;
+            }
+
+            .tabsContent {
+                display: block;
+
+                .cell {
+                    margin-left: $largeGutters;
+                    margin-right: $largeGutters;
+                }
+            }
+        }
+    }
+}

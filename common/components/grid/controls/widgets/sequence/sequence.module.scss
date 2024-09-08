@@ -1,0 +1,166 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetSequence {
+    display: grid;
+    .items {
+        overflow: hidden;
+        padding-left: 1rem;
+        > li {
+            position: relative;
+        }
+    }
+
+    .line {
+        position: absolute;
+        display: block;
+        width: 2px;
+        height: 5000vh;
+        left: -33px;
+        top: 3rem;
+        background-color: $black;
+    }
+
+    .markerContainer {
+        position: relative;
+    }
+
+    .title {
+        position: relative;
+        margin: 1rem 0;
+    }
+
+    .marker {
+        position: absolute;
+        top: 2.5625rem;
+        margin-top: -15px;
+        margin-left: -15px;
+        border: 2px solid $red;
+        background-color: $white;
+        border-radius: 15px;
+        width: 30px;
+        height: 30px;
+        display: block;
+        left: -2rem;
+        z-index: 2;
+    }
+
+    .wrapper {
+        position: relative;
+        margin-left: 2rem;
+    }
+
+    .endingText {
+        margin-bottom: 3rem;
+    }
+
+    .links {
+        margin-bottom: -1.5rem;
+        > div {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @include breakpoint(small only) {
+        .items {
+            > li + li {
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        .marker {
+            width: 44px;
+            height: 44px;
+            border-radius: 22px;
+            margin-top: -22px;
+            top: 4.0625rem;
+            border-width: 3px;
+        }
+        .title {
+            margin: 2.5rem 0 0;
+        }
+        .wrapper {
+            padding-bottom: 2.5rem;
+        }
+
+        .itemText {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            left: 0;
+        }
+
+        .line {
+            left: -6.0625rem;
+        }
+
+        .items {
+            overflow: hidden;
+            > li {
+                position: relative;
+                &:nth-child(2n) {
+                    margin-right: 50%;
+                    .wrapper {
+                        margin-right: 6rem;
+                    }
+                    .marker {
+                        right: -6rem;
+                        margin-right: -22px;
+                        left: auto;
+                    }
+                }
+                &:nth-child(2n + 1) {
+                    margin-left: 50%;
+                    .wrapper {
+                        margin-left: 6rem;
+                    }
+
+                    .marker {
+                        left: -6rem;
+                        margin-left: -22px;
+                    }
+                }
+                &:first-child {
+                    .title {
+                        &::after {
+                            left: -97px;
+                        }
+                    }
+                }
+                &:last-child {
+                    .wrapper {
+                        padding-bottom: 12rem;
+                    }
+                    .itemText {
+                        position: relative;
+                        top: 0;
+                        margin-top: 2.5rem;
+                    }
+                }
+            }
+        }
+
+        .ending {
+            margin-top: 3.5rem;
+        }
+
+        .endingText {
+            width: 538px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .links {
+            width: 678px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            > div {
+                padding: 0 1.5rem;
+            }
+        }
+    }
+}

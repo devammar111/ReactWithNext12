@@ -1,0 +1,92 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetCta {
+    background-color: $greyLighter;
+
+    &.variantSideVideo {
+        .boxContainer {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1;
+                max-width: 593px;
+                margin-right: 2rem;
+            }
+
+            .imageContainer {
+                position: relative;
+                max-width: 781px;
+                width: 781px;
+
+                .displayBtnArea {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 2;
+                    background-color: rgba($blue, .5);
+                    opacity: .7;
+                    transition: .3s opacity;
+            
+                    .displayBtnWrapper {
+                        width: 115px;
+                        height: 115px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        background: linear-gradient(180deg, rgba(255,255,255,0.46) 0%, rgba(255,255,255,0.46) 100%);
+                        backdrop-filter: blur(15px);
+                        cursor: pointer;
+            
+                        .playBtn {
+                            width: 0;
+                            height: 0;
+                            border-top: 21.5px solid transparent;
+                            border-bottom: 21.5px solid transparent;
+                            border-left: 29px solid $red;
+                            opacity: .8;
+                        }
+
+                        @media (max-width: 400px) {
+                            width: 80px;
+                            height: 80px;
+            
+                            .playBtn {
+                                border-top: 15px solid transparent;
+                                border-bottom: 15px solid transparent;
+                                border-left: 20px solid $red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include breakpoint(medium down) {
+            .boxContainer {
+                flex-direction: column;
+
+                .text {
+                    margin: 0;
+                    margin-bottom: 2rem;
+                }
+
+                .imageContainer {
+                   width: 100%;
+                }
+            }
+        }
+    }
+}

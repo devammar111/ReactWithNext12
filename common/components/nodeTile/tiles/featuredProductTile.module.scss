@@ -1,0 +1,33 @@
+@import '@styles/variables.scss';
+
+.featuredTile {
+    background-color: $white;
+    width: 100%;
+
+    h6 {
+        color: $black;
+        color: $blackLight;
+        font-family: $proximaNovaFont;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    &:hover, &:focus {
+        h6 {
+            color: $linkHoverColor;
+        }
+    }
+
+    .text {
+        margin-top: 40px;
+    }  
+    
+    .featuredItemLabel {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}

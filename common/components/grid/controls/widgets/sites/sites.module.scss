@@ -1,0 +1,203 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetSites {
+    &.layoutLeftAligned {
+        .container {
+            flex-direction: row;
+        }
+    }
+
+    &.layoutRightAligned {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &.wrapperContainer {
+        position: relative;
+    }
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        position: relative;
+    }
+
+    .cell {
+        margin-bottom: 2rem;
+    }
+
+    .grid {
+        margin-bottom: -1rem;
+
+        a {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            color: $white;
+            opacity: 0.7;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            line-height: 28px;
+            font-family: $proximaNovaFont;
+
+            &:hover, &:focus {
+                color: rgba($white, 1);
+                opacity: 0.9;
+            }
+
+            &.active {
+                color: $white;
+                opacity: 1;
+
+                .customLink {
+                    background-color: $red;
+                    border: none;
+                }
+            }
+        }
+
+        a::before {
+            border: 2px solid #3A4667;
+            display: inline-flex;
+            height: 45px;
+            width: 45px;
+            border-radius: 23px;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -23px;
+        }
+    }
+
+    .customLink {
+        display: inline-flex;
+        border-radius: 50%;
+        border: 1px solid $white;
+        align-items: center;
+        text-align: center;
+        color: $white;
+        height: 46px;
+        padding: 1.1rem;
+        margin-right: 1rem;
+        width: 46px;
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .tabs {
+        position: relative;
+        right: 0.7rem;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 11px;
+        list-style: none;
+        margin: 0;
+
+        a {
+            color: $white;
+            opacity: 0.7;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            line-height: 28px;
+            font-family: $proximaNovaFont;
+            position: relative;
+
+            &:hover, &:focus {
+                color: rgba($white, 1);
+                opacity: 0.9;
+            }
+
+            &.active {
+                color: $white;
+                opacity: 1;
+
+                .customLink {
+                    background-color: $red;
+                    border: none;
+                }
+            }
+        }
+
+        li {
+            &:nth-child(even) {
+                padding-left: 6rem;
+            }
+        }
+    }
+
+    .tabsContent {
+        margin-left: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .contentContainer {
+        position: relative;
+        top: 11rem;
+        padding-bottom: 11rem;
+    }
+
+    .linkEl {
+        padding: 1rem;
+        width: 213px;
+    }
+
+    .linkSpan {
+        position: absolute;
+        top: 1.5rem;
+        width: 222px;
+        height: 65px;
+    }
+
+    .linkText {
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+   
+    .disableLink {
+        pointer-events: none;
+    }
+
+    .imageDiv {
+        position: absolute;
+        min-height: 100%;
+        z-index: -1;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &.hideImage {
+            visibility: hidden;
+        }
+
+        &.showImage {
+            visibility: visible;
+        }
+    }
+
+    @include breakpoint(large down) {
+
+        .tabs {
+            li {
+                &:nth-child(even) {
+                    padding-left: 4rem;
+                }
+            }
+        }
+
+        .tabsContent {
+            margin-left: 0;
+        }
+    }
+}
+

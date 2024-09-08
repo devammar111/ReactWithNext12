@@ -1,0 +1,81 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetCta {
+    &.variantFullWidth {
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .wrapper {
+            width: 1160px;
+            padding: 0 10px;
+            max-width: 100%;
+        }
+
+        .overlayBanner {
+            height: 546px;
+            margin-top: 6rem;
+        }
+
+        .extraImageSpace {
+            padding-top: 9rem;
+        }
+
+        .removeTextBackground {
+            background: transparent;
+            backdrop-filter: none;
+        }
+
+        .wrapperRight700 {
+            width: 100%;
+            padding: 56px 335px;
+            min-height: 700px;
+
+            > div {
+                padding: 5rem 1rem 5rem;
+            }
+
+            p {
+                line-height: 28px;
+                font-size: 18px;
+                letter-spacing: 0;
+            }
+        }
+
+        .wrapperLeft700 {
+            width: 100%;
+            padding: 71px 255px;
+            min-height: 700px;
+
+            > div {
+                padding: 5rem 1rem 5rem;
+            }
+
+            p {
+                line-height: 28px;
+                font-size: 18px;
+                letter-spacing: 0;
+            }
+        }
+
+        &.layoutRightAligned {
+            .wrapper {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
+        @include breakpoint(large down) {
+            .wrapperRight700 {
+                padding: 56px 19px;
+            }
+
+            .wrapperLeft700 {
+                padding: 56px 19px;
+            }
+        }
+    }
+}
+

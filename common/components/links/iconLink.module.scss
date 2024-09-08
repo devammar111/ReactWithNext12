@@ -1,0 +1,21 @@
+.iconLink {
+    &.iconOnly {
+        font-size: 1.25rem;
+
+        &.large {
+            font-size: 1.5rem;
+        }
+    }
+
+    &.iconAfter {
+        i {
+            margin-left: 1rem;
+        }
+    }
+
+    &.iconBefore {
+        i {
+            margin-right: 1rem;
+        }
+    }
+}

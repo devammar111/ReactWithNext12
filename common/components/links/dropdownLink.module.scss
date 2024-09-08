@@ -1,0 +1,110 @@
+@import '../../../styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.dropdownLink {
+    font-size: 1.125rem;
+    font-weight: bold;
+    position: relative;
+
+    .dropdown {
+        list-style: none;
+        padding: 0;
+    }
+
+    @include breakpoint(medium down) {
+        .dropdown {
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .linkBlock {
+            display: flex;
+
+            a {
+                padding: .5rem;
+
+                &:first-child {
+                    background-color: rgba($black, .2);
+                    flex: 1 1 auto;
+
+                    &:hover, &:focus {
+                        background-color: rgba($black, .3);
+                    }
+                }
+            }
+        }
+
+        .expander {
+            color: $white;
+            width: 46px;
+            display: flex;
+            justify-content: center;
+            background-color: rgba($black, .5);
+            align-items: center;
+            flex: 0 0 auto;
+
+            &::before {
+                transition: transform .3s;
+                transform: rotateZ(0deg);
+            }
+
+            &.active {
+                &::before {
+                    transform: rotateZ(90deg);
+                }
+            }
+
+            &:hover, &:focus {
+                color: $white;
+                background-color: rgba($black, .6);
+            }
+        }
+
+        .dropdown {
+            li {
+                padding: .5rem;
+            }
+        }
+    }
+
+
+    @include breakpoint(large) {
+        padding-bottom: 10px;
+
+        .dropdown {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translate3d(-50%, -10px, 0);
+            left: 50%;
+            top: 100%;
+            transition: all .3s;
+            background-color: $red;
+            transform-origin: top center;
+            min-width: 200px;
+            text-align: left;
+
+            a {
+                color: $white;
+                display: block;
+                padding: .75rem;
+
+                &:hover {
+                    color: $white;
+                    background-color: rgba($black, .3);
+                }
+            }
+        }
+
+        &:hover {
+            .dropdown {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+    }
+}

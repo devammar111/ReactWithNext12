@@ -1,0 +1,94 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetCarousel {
+    &.variantImages {
+        position: relative;
+
+        h3 {
+            color: $red;
+        }
+
+        .nodeSwiper {
+            position: unset !important;
+            overflow: visible;
+            width: 100%;
+        }
+
+        .swipernext, .swiperprev {
+            position: absolute;
+            top: 45%;
+            z-index: 9;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 12px 0 rgba(0,0,0,0.5);
+            border-radius: 50%;
+            font-weight: 900;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: $red;
+            cursor: pointer;
+        }
+
+        .swipernext {
+            right: 0;
+        }
+
+        .swipernext::after, .swiperprev::after {
+            content: '';
+        }
+
+        .swipernext:hover, .swiperprev:hover {
+            background-color: $greyLighter;
+        }
+
+        @include breakpoint(small) {
+            .swipernext, .swiperprev {
+                height: 40px;
+                width: 40px;
+                margin-top: 0px;
+            }
+
+            .swiperprev {
+                margin-left: -0.3rem;
+            }
+
+            .swipernext {
+                margin-right: -0.3rem;
+            }
+        }
+
+        @include breakpoint(medium) {
+            .swipernext, .swiperprev {
+                height: 50px;
+                width: 50px;
+                margin-top: -2%;
+            }
+
+            .swiperprev {
+                margin-left: -1rem;
+            }
+
+            .swipernext {
+                margin-right: -1rem;
+            }
+        }
+
+        @include breakpoint(xxxlarge) {
+            .swipernext, .swiperprev {
+                height: 70px;
+                width: 70px;
+                margin-top: -2%;
+            }
+
+            .swiperprev {
+                margin-left: -10%;
+            }
+
+            .swipernext {
+                margin-right: -10%;
+            }
+        }
+    }
+}

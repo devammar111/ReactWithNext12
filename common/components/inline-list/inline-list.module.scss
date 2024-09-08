@@ -1,0 +1,42 @@
+@import 'foundation-sites/scss/foundation.scss';
+
+@mixin inlineListStyles() {
+    display: inline-flex;
+    margin: 0 -1rem;
+    list-style: none;
+    padding-left: 0;
+
+    > li {
+        margin: 0 1rem;
+    }
+
+    &.narrow {
+        margin: 0 -.5rem;
+
+        > li {
+            margin: 0 .5rem;
+        }
+    }
+
+    .divider {
+        &::before {
+            content: '|';
+        }
+    }
+}
+
+.inlineList {
+    @include inlineListStyles();
+}
+
+@include breakpoint(medium) {
+    .mediumInlineList {
+        @include inlineListStyles();
+    }
+}
+
+@include breakpoint(large) {
+    .largeInlineList {
+        @include inlineListStyles();
+    }
+}

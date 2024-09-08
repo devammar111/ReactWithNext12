@@ -1,0 +1,65 @@
+@import '@styles/variables.scss';
+@import 'foundation-sites/scss/foundation.scss';
+
+.widgetMultipleImages {
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loadMoreBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4.438rem;
+    }
+
+    .cellContainer {
+        min-width: 419px;
+        margin-right: 0.5rem;
+        margin-bottom: 48px;
+        filter: drop-shadow(0 0 0.75rem #BEBEBE);
+
+        img {
+            border-radius: 8px;
+        }
+    }
+
+    .customBtnLoadMore {
+        height: 50px;
+        border-radius: 8px;
+        background-color: $red;
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        line-height: 22px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        padding: 5px 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 200px;
+
+        &:hover, &:focus {
+            background-color: $darkRed;
+        }
+    }
+
+    @include breakpoint(xlarge down) {
+        .cellContainer {
+            max-width: 419px;
+            min-width: auto;
+        }
+    }
+
+    @include breakpoint(small only) {
+        .cellContainer {
+            max-width: 100%;
+        }
+    }
+}
